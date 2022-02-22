@@ -197,12 +197,11 @@ start_ngrok() {
 tunnel_menu() {
 	{ clear; banner_small; }
 	cat <<- EOF
-		${RED}[${WHITE}01${RED}]${ORANGE} Localhost    ${RED}[${CYAN}For Devs${RED}]
-		${RED}[${WHITE}02${RED}]${ORANGE} Ngrok.io     ${RED}[${CYAN}Buggy${RED}]
-		${RED}[${WHITE}03${RED}]${ORANGE} Cloudflared  ${RED}[${CYAN}NEW!${RED}]
+		${RED}[${WHITE}01${RED}]${ORANGE} Localhost    ${RED}[${CYAN}]
+		${RED}[${WHITE}02${RED}]${ORANGE} Ngrok.io     ${RED}[${CYAN}]
 	EOF
 
-	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select a port forwarding service : ${BLUE}"
+	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select service : ${BLUE}"
 
 	case $REPLY in 
 		1 | 01)
