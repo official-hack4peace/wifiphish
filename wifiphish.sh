@@ -33,10 +33,7 @@ kill_pid() {
 	fi
 	if [[ `pidof ngrok` ]]; then
 		killall ngrok > /dev/null 2>&1
-	fi
-	if [[ `pidof cloudflared` ]]; then
-		killall cloudflared > /dev/null 2>&1
-	fi
+        fi
 }
 
 ## Dependencies
@@ -225,9 +222,8 @@ if [[ $option == 1 ]]; then
 server="wifi"
 start
 
-elif [[ $option == 0 ]]; then
-Exit="exit"
-esac
+0 | 00 )
+			msg_exit;
 # ngrok 
 start_ngrok() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
