@@ -209,8 +209,6 @@ tunnel_menu() {
 			start_localhost;;
 		2 | 02)
 			start_ngrok;;
-		3 | 03)
-			start_cloudflared;;
 		*)
 			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
 			{ sleep 1; tunnel_menu; };;
@@ -222,8 +220,9 @@ if [[ $option == 1 ]]; then
 server="wifi"
 start
 
-0 | 00 )
-			msg_exit;
+elif [[ $option == 0 ]]; then
+Exit="Exit"
+msg_exit;
 # ngrok 
 start_ngrok() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
