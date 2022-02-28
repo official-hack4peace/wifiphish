@@ -281,7 +281,7 @@ tunnel_menu() {
 }
 
 ## Exit message
-msg_exit() {
+exit_msg() {
 	{ clear; banner; echo; }
 	echo -e "${GREENBG}${BLACK} Thank you for using this tool. Have a good day.${RESETBG}\n"
 	{ reset_color; exit 0; }
