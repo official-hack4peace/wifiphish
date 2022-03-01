@@ -8,3 +8,9 @@ Wifiphish is a tool for wifi phishing.
 2. cd wifiphish
 3. bash ngrok.sh
 4. (For local host) php -S localhost:8000
+# how to use ngrok
+1. Start php server (php -S localhost:8000)
+2. Now start ngrok server (./ngrok http 8000)
+That's all..
+# Thanks
+Thanks for using this tool if you like this tool then please subscribe our YouTube channel.
